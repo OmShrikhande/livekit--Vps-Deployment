@@ -4,14 +4,14 @@ rtc:
   port_range_start: 50000
   port_range_end: 60000
   use_external_ip: true
-stun_servers:
-  - stun.l.google.com:19302
+  stun_servers:
+    - stun.l.google.com:19302
 keys:
   AK6VfNfQJbUvD9E: S1k8L2n3P4m5Q6R7T8U9V0W1X2Y3Z4
 turn:
   enabled: true
   udp_port: 3478
-  auth_secret: S1k8L2n3P4m5Q6R7T8U9V0W1X2Y3Z4
+  secret: S1k8L2n3P4m5Q6R7T8U9V0W1X2Y3Z4
 logging:
   json: false
   level: info
