@@ -11,7 +11,6 @@ keys:
 turn:
   enabled: true
   udp_port: 3478
-  secret: S1k8L2n3P4m5Q6R7T8U9V0W1X2Y3Z4
 logging:
   json: false
   level: info
