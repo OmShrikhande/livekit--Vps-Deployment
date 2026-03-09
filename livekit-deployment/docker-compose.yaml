@@ -1,0 +1,22 @@
+version: '3'
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --config /etc/livekit.yaml
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./livekit.yaml:/etc/livekit.yaml
+
+  backend:
+    build:
+      context: ../livebackend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - LIVEKIT_API_KEY=AK6VfNfQJbUvD9E
+      - LIVEKIT_API_SECRET=S1k8L2n3P4m5Q6R7T8U9V0W1X2Y3Z4
+      - LIVEKIT_URL=ws://194.163.187.104:7880
+      - PORT=5000

@@ -1,0 +1,22 @@
+port: 7880
+bind_addresses:
+  - "0.0.0.0"
+rtc:
+  tcp_port: 7881
+  port_range_start: 50000
+  port_range_end: 60000
+  use_external_ip: true
+  external_ip: "194.163.187.104"
+  stun_servers:
+    - stun.l.google.com:19302
+keys:
+  AK6VfNfQJbUvD9E: S1k8L2n3P4m5Q6R7T8U9V0W1X2Y3Z4
+turn:
+  enabled: true
+  external_ip: "194.163.187.104"
+  port: 3478
+  tcp_port: 3479
+  auth_secret: S1k8L2n3P4m5Q6R7T8U9V0W1X2Y3Z4
+logging:
+  json: false
+  level: info
