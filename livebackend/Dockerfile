@@ -1,20 +1,16 @@
 FROM node:20-slim
 
-# Install pnpm
-RUN npm install -g pnpm
-
 WORKDIR /app
 
 # Copy package files
-COPY package.json pnpm-lock.yaml ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN pnpm install
+RUN npm install
 
-# Copy source code
+# Copy project files
 COPY . .
 
-# Expose the port
-EXPOSE 5000
+EXPOSE 3000
 
 CMD ["node", "index.js"]
